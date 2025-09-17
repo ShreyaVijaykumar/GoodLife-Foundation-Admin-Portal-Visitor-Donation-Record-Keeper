@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Visitor Entry Form</h2>
+<form method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Aadhar Number:</label>
+    <input type="text" name="aadhar" required>
+
+    <label>Age:</label>
+    <input type="number" name="age" required>
+
+    <label>Address:</label>
+    <textarea name="address" required></textarea>
+
+    <label>Purpose of Visit:</label>
+    <input type="text" name="purpose" required>
+
+    <label>Remarks:</label>
+    <textarea name="remarks"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Donation Entry Form</h2>
+<form method="POST">
+    <label>Donor Name:</label>
+    <input type="text" name="donor_name" required>
+
+    <label>Amount Donated (₹):</label>
+    <input type="number" step="0.01" name="amount">
+
+    <label>Items Donated:</label>
+    <textarea name="items_donated"></textarea>
+
+    <label>Payment Mode:</label>
+    <select name="payment_mode" id="payment_mode" onchange="togglePaymentDetail()">
+        <option value="">Select</option>
+        <option value="Cash">Cash</option>
+        <option value="UPI">UPI</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+    </select>
+
+    <div id="payment_detail_div" style="display:none;">
+        <label>Payment Detail (e.g., UPI ID or Bank Ref):</label>
+        <input type="text" name="payment_detail">
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function togglePaymentDetail() {
+    var mode = document.getElementById("payment_mode").value;
+    var detailDiv = document.getElementById("payment_detail_div");
+    detailDiv.style.display = mode === "UPI" || mode === "Bank Transfer" ? "block" : "none";
+}
+</script>
+{% endblock %}
