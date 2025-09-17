@@ -34,7 +34,7 @@ GoodLife Foundation Admin Portal is a lightweight and simple Flask + SQLite3 web
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/goodlife-foundation.git
+git clone https://github.com/ShreyaVijaykumar/GoodLife-Foundation-Admin-Portal-Visitor-Donation-Record-Keeper.git
 cd goodlife-foundation
 ```
 
